@@ -23,7 +23,7 @@ These systems joined several generations of dashboards and services around chang
 ## System shape
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Product services"]
     n1["Admin backend"]
     n2["Role checks"]
