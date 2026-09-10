@@ -1,23 +1,28 @@
-[← All systems](https://github.com/J0UH) · [Money and operations systems](https://github.com/J0UH/money-operations-systems)
-
-<p align="center">
-  <img src="assets/hero.webp" alt="A physical instrument wall isolates one guarded ochre control from six state apertures" width="100%" />
-</p>
+[← All work](https://github.com/J0UH) · [Money and operations systems](https://github.com/J0UH/money-operations-systems)
 
 # Operational control planes
 
-The admin side of a product is where ambiguity becomes expensive. Operators need to see state, understand why it changed, take controlled action, and leave enough evidence for the next person.
+The administrator and support tools that make a complex product possible to operate.
 
-## The engineering problem
+<img src="assets/hero-v2.webp" alt="Operational control planes illustrated as a crafted architectural model, with exposed sketch and structural framing" width="100%" />
 
-These systems joined several generations of dashboards and services around changing products. The work included making state consistent, reducing hidden manual steps, and designing safer controls.
+An operator often arrives at the moment when the ordinary product flow no longer explains enough. An account has an unusual state, a transaction needs investigation, or an action needs review.
 
+The dashboard and backend work focuses on giving that person a useful picture and a clear way to act. Some generations began from licensed or open-source interface foundations; others were purpose-built applications and services.
 
-## Foundation and adaptation
+## Showing what the screen knows
+
+A displayed value should have a source and a time boundary. When several services contribute to a view, the operator needs to understand whether they are seeing a current fact or a derived snapshot.
+
+Observation and action also need distinct treatment. Looking at a transaction is different from changing it. Roles, approvals, and audit history belong around consequential controls.
+
+The work covers domain modelling, aggregation, migrations, and the action model behind the interface. The aim is to reduce hidden manual steps while preserving the context the next operator will need.
+
+## Built on
 
 Some dashboard generations began from licensed interface systems such as Metronic or from open-source admin templates; others were purpose-built applications and services. The work shown here covers the domain model, backend aggregation, role and action design, migration, and operating controls added around those foundations.
 
-## What the system covers
+## What the work covers
 
 - Administrative and support workflows
 - Account, product, and transaction views
@@ -25,7 +30,8 @@ Some dashboard generations began from licensed interface systems such as Metroni
 - Backend aggregation and integration
 - Audit history and operational reporting
 
-## System shape
+<details>
+<summary>A closer look at the technical flow</summary>
 
 ```mermaid
 flowchart TD
@@ -41,14 +47,13 @@ accDescr: Product state is separated from the operator view. Consequential actio
     verify -->|Yes| audit["Audit history"]
 ```
 
-## Build notes
+</details>
 
-- Show operators the source and age of important state.
-- Separate observation from action.
-- Put confirmation and evidence around consequential controls.
+## Related work
 
-<sub>Public overview only. Source code, customer data, credentials, and private operating details are not included.</sub>
+- [Money and operations systems](https://github.com/J0UH/money-operations-systems)
+- [Regulated product portals](https://github.com/J0UH/regulated-product-portals)
 
-## Talk through a similar problem
+Working on a similar problem? [Tell me what you are building](mailto:ju@jomena.group?subject=Operational%20control%20planes).
 
-Working on something similar? [Tell me about it](mailto:ju@jomena.group?subject=Operational%20control%20planes).
+*This is a public account of the work. Source code and private operating details are not included in this repository.*
